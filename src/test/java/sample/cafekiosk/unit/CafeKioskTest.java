@@ -101,8 +101,8 @@ class CafeKioskTest {
         Americano americano = new Americano();
 
         cafeKiosk.add(americano);
-
-        Order order = cafeKiosk.createOrder();
+        LocalDateTime currentDateTime = LocalDateTime.of(2025, 7, 10, 13, 0);
+        Order order = cafeKiosk.createOrder(currentDateTime);
 
         assertThat(order.getBeverages()).hasSize(1);
         assertThat(order.getBeverages().get(0).getName()).isEqualTo("아메리카노");
