@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
+import sample.cafekiosk.spring.ControllerTestSupport;
 import sample.cafekiosk.spring.api.controller.order.request.OrderCreateRequest;
 import sample.cafekiosk.spring.api.service.order.OrderService;
 
@@ -19,18 +20,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(OrderController.class)
-@ActiveProfiles("test")
-class OrderControllerTest {
+//@WebMvcTest(OrderController.class)
+//@ActiveProfiles("test")
+class OrderControllerTest extends ControllerTestSupport {
 
-    @Autowired
-    private MockMvc mockMvc;
-
-    @MockitoBean
-    private OrderService orderService;
-
-    @Autowired
-    private ObjectMapper objectMapper;
+//    @Autowired
+//    private MockMvc mockMvc;
+//
+//    @MockitoBean
+//    private OrderService orderService;
+//
+//    @Autowired
+//    private ObjectMapper objectMapper;
 
 
     @DisplayName("산규 주문을 등록한다.")
