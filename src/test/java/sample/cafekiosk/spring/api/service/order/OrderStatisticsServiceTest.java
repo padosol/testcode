@@ -78,6 +78,7 @@ class OrderStatisticsServiceTest {
         Order order3 = createPaymentCompletedOrder(LocalDateTime.of(2025,7,13,23,59, 59), products);
         Order order4 = createPaymentCompletedOrder(LocalDateTime.of(2025,7,14,0,0), products);
 
+        // stubbing
         Mockito.when(mailSendClient.sendEmail(any(String.class), any(String.class), any(String.class), any(String.class)))
                 .thenReturn(true);
 
